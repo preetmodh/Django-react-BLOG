@@ -54,7 +54,7 @@ export default function SignUp() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(formData);
+		
 
 		axiosInstance
 			.post(`user/create/`, {
@@ -64,8 +64,6 @@ export default function SignUp() {
 			})
 			.then((res) => {
 				history.push('/login');
-				console.log(res);
-				console.log(res.data);
 			});
 	};
 
@@ -118,12 +116,7 @@ export default function SignUp() {
 								onChange={handleChange}
 							/>
 						</Grid>
-						<Grid item xs={12}>
-							<FormControlLabel
-								control={<Checkbox value="allowExtraEmails" color="primary" />}
-								label="I want to receive inspiration, marketing promotions and updates via email."
-							/>
-						</Grid>
+						
 					</Grid>
 					<Button
 						type="submit"

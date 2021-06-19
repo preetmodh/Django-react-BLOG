@@ -29,9 +29,9 @@ export default function Post() {
 			setData({
 				posts: res.data,
 			});
-			console.log(res.data);
+			
 		});
-	}, [setData]);
+	}, [setData, slug]);
 
 	return (
 		<Container component="main" maxWidth="md">
